@@ -2,9 +2,9 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize(
  'TaskManager',
  'postgres',
- 'root',
+ 'password',
   {
-    host: '192.168.1.211',
+    host: '106.51.90.72',
     dialect: 'postgres',
     port: 5432
   }
