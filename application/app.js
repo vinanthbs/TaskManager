@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req,res)=>{
     task.findAll().then(tasks=>{
-        console.log(tasks)
+        //console.log(tasks)
         res.render('index', {tasks : tasks, messages: req.flash()})
     })
 })
