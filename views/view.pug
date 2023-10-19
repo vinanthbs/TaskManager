@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    p #{tasks.task_title}
+    p #{tasks.task_status}
+    p #{tasks.task_duedate} 
+    br
+    a.button.btn.btn-primary(type='button', href='/task/editask/' + tasks.t_id) Edit
+    a.button.btn.btn-danger(type='button', onclick='myFunction()', href='/task/delete/') Delete
+    script.
+        function myFunction() {
+        alert("Task has been deleted sucessfully");
+        }

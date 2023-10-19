@@ -1,0 +1,48 @@
+html 
+    head 
+        title Primeframe 
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel="icon" href="/bower_components/bootstrap/5.png" type="image/x-icon")
+</head>
+    body
+        .container
+            .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
+                a.d-flex.align-items-center.my-2.my-lg-0.me-lg-auto.text-white.text-decoration-none(href='/')
+                    svg.bi.me-2(width='40' height='32' role='img' aria-label='Bootstrap')
+                        use(xlink:href='#bootstrap')
+                ul.nav.col-12.col-lg-auto.my-2.justify-content-center.my-md-0.text-small
+                    li
+                        a.nav-link.text-secondary(href='/')
+                            svg.bi.d-block.mx-auto.mb-1(width='24' height='24')
+                                use(xlink:href='/')
+                            |                 Home
+                    li
+                        a.nav-link.text-secondary(href='/task/addtask')
+                            svg.bi.d-block.mx-auto.mb-1(width='24' height='24')
+                                use(xlink:href='#home')
+                            |                 Add Task   
+                    li
+                        a.nav-link.text-secondary(href='/user/register')
+                            svg.bi.d-block.mx-auto.mb-1(width='24' height='24')
+                                use(xlink:href='user/signup')
+                            |                 Register   
+                    li
+                        a.nav-link.text-secondary(href='/user/login')
+                            svg.bi.d-block.mx-auto.mb-1(width='24' height='24')
+                                use(xlink:href='user/signup')
+                            |                 Login              
+                    li
+                        a.nav-link.text-secondary(href='/user/logout')
+                            svg.bi.d-block.mx-auto.mb-1(width='24' height='24')
+                                use(xlink:href='user/signup')
+                            |                 Logout                                                         
+
+        .container 
+            block content 
+            br
+            hr
+    footer 
+        p.text-right © 2023 Copywrite 
+    Script(src='/bower_components/bootstrap/dist/js/bootstrap.js')    
+    Script(src='/bower_components/jquery/dist/.js')
+        

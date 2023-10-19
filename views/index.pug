@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    h1 Welcome back !
+    if messages.error
+        .alert.alert-danger= messages.error
+    if messages.success
+        .alert.alert-success= messages.success
+    br
+    div
+        a.button.btn.btn-secondary(type='button', href='/task/OpenTasks/') Pending task
+    br    
+    ul.list-group
+        each task , i in tasks 
+            li.list-group-item
+                a(href='task/view/'+ task.t_id)=task.task_title  

@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    form(method="POST" action="/task/editask/" + tasks.t_id) 
+        h2  Edit Task  
+        #form-group 
+            label task desc  
+            input.form-control(name ='task_desc', type ='text',maxlength="50", required, value = tasks.task_desc)
+        #form-group 
+            label task status  
+            input.form-control(name ='task_status', type ='text',maxlength="10", required, value = tasks.task_status)
+        #form-group  
+            label task title  
+            input.form-control(name ='task_duedate', type ='text', maxlength="20", required, value = tasks.task_duedate)
+        br    
+        input.btn.btn-primary(type='submit', value ='SUBMIT')

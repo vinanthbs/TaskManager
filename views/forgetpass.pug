@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    form(method="POST" action="/user/forgetPassword/") 
+        h2  Reset Password  
+        #form-group 
+            label Enter e-mail to reset password   
+            input.form-control(name ='emailid', type ='text', maxlength="80") 
+        #form-group 
+            label Enter Registered Phone number  
+            input.form-control(name ='phone', type ='text', maxlength="80")   
+        input.btn.btn-primary(type='submit', value ='SUBMIT')

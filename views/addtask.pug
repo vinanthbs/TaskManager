@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+    form(method="POST" action="/task/addtask") 
+        h2  Add Task
+        #form-group  
+            label task title  
+            input.form-control(name ='task_title', type ='text', maxlength="20", required)  
+        #form-group 
+            label task desc  
+            input.form-control(name ='task_desc', type ='text',maxlength="50", required)
+        #form-group 
+            label task status  
+            input.form-control(name ='task_status', type ='text',maxlength="10", required)
+        #form-group 
+            label task due date  
+            input.form-control(name ='task_duedate', type ='text',maxlength="20", required)    
+        br    
+        input.btn.btn-primary(type='submit', value ='SUBMIT')
